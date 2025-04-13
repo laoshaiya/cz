@@ -3,71 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÀÏÉñÆüÓÎÏ·¹«¸æ</title>
+    <title>è€ç¥æ³£æ¸¸æˆå…¬å‘Š</title>
     <style>
+        body {
+            font-family: "Microsoft YaHei", SimHei, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
         .container {
             text-align: center;
-            width: 90%; /* ¸ÄÓÃ°Ù·Ö±È¿í¶È */
-            max-width: 1200px; /* Ôö´ó×î´ó¿í¶È */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box; /* ĞŞ¸´ºĞÄ£ĞÍ */
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        .banner {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 30px 0;
         }
         .banner-img {
-            width: 80%; /* ÏìÓ¦Ê½Í¼Æ¬¿í¶È */
-            max-width: 250px; /* ±£³Ö×î´ó³ß´ç */
-            height: auto; /* ×Ô¶¯¸ß¶È±£³Ö±ÈÀı */
-            margin: 10px;
+            width: 280px;      /* å›ºå®šå®½åº¦ */
+            height: 400px;     /* å›ºå®šé«˜åº¦ */
+            object-fit: cover;  /* å…³é”®å±æ€§ï¼šä¿æŒæ¯”ä¾‹å¡«å…… */
+            object-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
         }
-        .text-large {
-            font-size: 1.4rem; /* Ôö´ó×ÖºÅ */
-            line-height: 1.8; /* Ôö¼ÓĞĞ¸ß */
-            word-wrap: break-word; /* ÔÊĞí³¤µ¥´Ê»»ĞĞ */
-            margin: 20px 0;
+        .banner-img:hover {
+            transform: scale(1.03);
+        }
+        .contact-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
         }
         .nav-list {
             list-style: none;
             padding: 0;
-            margin: 30px 0;
+            margin: 40px 0;
         }
         .nav-link {
-            color: #0000FF;
+            display: inline-block;
+            margin: 15px 20px;
+            padding: 14px 35px;
+            background: #007bff;
+            color: white !important;
             text-decoration: none;
-            display: inline-block; /* ¸ÄÎªĞĞÄÚ¿é¼¶ÔªËØ */
-            margin: 15px 20px; /* Ôö¼Ó¼ä¾à */
-            padding: 8px 15px;
-            border: 1px solid #0000FF; /* Ôö¼Ó¿ÉÊÓĞÔ */
-            border-radius: 4px;
+            border-radius: 30px;
             transition: all 0.3s;
+            font-size: 1.1rem;
+            border: 2px solid transparent;
         }
         .nav-link:hover {
-            background: #0000FF;
-            color: white;
+            background: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         .qq-link {
-            color: #0000FF;
+            color: #007bff;
+            font-weight: 600;
+            font-size: 1.3rem;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin: 20px 0;
-            padding: 10px 20px;
-            border: 2px solid #0000FF;
+            border-bottom: 2px dashed #007bff;
+            padding-bottom: 2px;
         }
 
-        /* ÒÆ¶¯¶ËÊÊÅä */
         @media (max-width: 768px) {
-            .banner-img {
+            .container {
+                padding: 20px;
                 width: 95%;
-                max-width: none;
-                margin: 10px 0;
             }
-            .text-large {
-                font-size: 1.2rem;
+            .banner {
+                gap: 20px;
+            }
+            .banner-img {
+                width: 100%;
+                max-width: 280px;
+                height: 380px;
             }
             .nav-link {
                 display: block;
-                margin: 10px auto;
-                width: 80%;
+                margin: 15px auto;
+                width: 90%;
+                padding: 12px 25px;
             }
         }
     </style>
@@ -75,23 +102,25 @@
 <body>
     <div class="container">
         <div class="banner">
-            <img src="123.jpg" alt="ÓÎÏ·Ğû´«Í¼1" class="banner-img">
-            <img src="321.jpg" alt="ÓÎÏ·Ğû´«Í¼2" class="banner-img">
+            <img src="123.jpg" alt="æ¸¸æˆåœºæ™¯å±•ç¤º" class="banner-img">
+            <img src="321.jpg" alt="æ¸¸æˆè§’è‰²å±•ç¤º" class="banner-img">
         </div>
-        
-        <p class="text-large">
-            ÁªÏµ¿Í·şQQ£º
-            <a href="tencent://message/?uin=2429063588&Site=&Menu=yes" 
-               class="qq-link"
-               target="_blank">
-                2429063588
-            </a>
-        </p>
+
+        <div class="contact-section">
+            <h2 style="margin:0; color:#333">
+                è”ç³»å®¢æœQQï¼š
+                <a href="tencent://message/?uin=2429063588" 
+                   class="qq-link"
+                   target="_blank">
+                    2429063588
+                </a>
+            </h2>
+        </div>
 
         <ul class="nav-list">
-            <li><a href="http://www.laoshaiya.com/act/yxgg02.html" class="nav-link">4.5¸´¹Å°æ½éÉÜ</a></li>
-            <li><a href="http://www.laoshaiya.com/act/yxgg04.html" class="nav-link">ĞÂÔö¹¦ÄÜ½éÉÜ</a></li>
-            <li><a href="http://www.laoshaiya.com/act/yxgg03.html" class="nav-link">Î¥¹æ´¦·£</a></li>
+            <li><a href="http://www.laoshaiya.com/act/yxgg02.html" class="nav-link">4.5å¤å¤ç‰ˆä»‹ç»</a></li>
+            <li><a href="http://www.laoshaiya.com/act/yxgg04.html" class="nav-link">æ–°å¢åŠŸèƒ½ä»‹ç»</a></li>
+            <li><a href="http://www.laoshaiya.com/act/yxgg03.html" class="nav-link">è¿è§„å¤„ç½šæ¡ä¾‹</a></li>
         </ul>
     </div>
 </body>
