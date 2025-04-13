@@ -1,17 +1,98 @@
-<style type="text/css">
-<!--
-.STYLE1 {font-size: large}
-.STYLE2 {color: #0000FF}
-.STYLE3 {font-size: medium}
--->
-</style>
-<p align="center"><img src="123.jpg" width="250" height="350" /><img src="321.jpg" width="250" height="350" /></p>
-<p align="center" class="STYLE1">联系客服QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=2429063588&site=qq&menu=yes','_blank" class="STYLE2">2429063588</a></p>
-<p align="center" class="STYLE1"> 
-<strong><a href="http://www.laoshaiya.com/act/yxgg02.html">4.5复古版介绍</a></strong><br>
-<strong><a href="http://www.laoshaiya.com/act/yxgg04.html">新增功能介绍</a></strong><br>
-<strong><a href="http://www.laoshaiya.com/act/yxgg03.html">违规处罚</a></strong><br>
-<ul>
-  <li></li>
-</ul>
-<div align="center"></div>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老神泣游戏公告</title>
+    <style>
+        .container {
+            text-align: center;
+            width: 90%; /* 改用百分比宽度 */
+            max-width: 1200px; /* 增大最大宽度 */
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box; /* 修复盒模型 */
+        }
+        .banner-img {
+            width: 80%; /* 响应式图片宽度 */
+            max-width: 250px; /* 保持最大尺寸 */
+            height: auto; /* 自动高度保持比例 */
+            margin: 10px;
+        }
+        .text-large {
+            font-size: 1.4rem; /* 增大字号 */
+            line-height: 1.8; /* 增加行高 */
+            word-wrap: break-word; /* 允许长单词换行 */
+            margin: 20px 0;
+        }
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+        .nav-link {
+            color: #0000FF;
+            text-decoration: none;
+            display: inline-block; /* 改为行内块级元素 */
+            margin: 15px 20px; /* 增加间距 */
+            padding: 8px 15px;
+            border: 1px solid #0000FF; /* 增加可视性 */
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        .nav-link:hover {
+            background: #0000FF;
+            color: white;
+        }
+        .qq-link {
+            color: #0000FF;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            border: 2px solid #0000FF;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .banner-img {
+                width: 95%;
+                max-width: none;
+                margin: 10px 0;
+            }
+            .text-large {
+                font-size: 1.2rem;
+            }
+            .nav-link {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="123.jpg" alt="游戏宣传图1" class="banner-img">
+            <img src="321.jpg" alt="游戏宣传图2" class="banner-img">
+        </div>
+        
+        <p class="text-large">
+            联系客服QQ：
+            <a href="tencent://message/?uin=2429063588&Site=&Menu=yes" 
+               class="qq-link"
+               target="_blank">
+                2429063588
+            </a>
+        </p>
+
+        <ul class="nav-list">
+            <li><a href="http://www.laoshaiya.com/act/yxgg02.html" class="nav-link">4.5复古版介绍</a></li>
+            <li><a href="http://www.laoshaiya.com/act/yxgg04.html" class="nav-link">新增功能介绍</a></li>
+            <li><a href="http://www.laoshaiya.com/act/yxgg03.html" class="nav-link">违规处罚</a></li>
+        </ul>
+    </div>
+</body>
+</html>
